@@ -13,6 +13,8 @@ namespace Ovning2
                 ShowMainMenu();
                 string? userInput = Console.ReadLine()?.Trim();
 
+                // Use MenuHelpers constants to determine which action to perform
+                // Util methods are called within each action to handle input validation
                 switch (userInput)
                 {
                     case MenuHelpers.ControlPrice:
@@ -69,6 +71,7 @@ namespace Ovning2
                 totalCost += GetTicketPrice(age);
             }
 
+            // Show summary of total cost
             Console.WriteLine("\n=== Sammanfattning ===");
             Console.WriteLine($"Antal personer: {numberOfPeople}");
             Console.WriteLine($"Totalkostnad: {totalCost}kr\n");
@@ -104,6 +107,7 @@ namespace Ovning2
             Console.WriteLine($"Det tredje ordet är: {words[2]}\n");
         }
 
+        // Determine ticket price based on
         private int GetTicketPrice(double age)
         {
             if (age < 5)

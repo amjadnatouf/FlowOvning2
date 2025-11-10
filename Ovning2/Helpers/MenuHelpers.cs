@@ -1,5 +1,6 @@
 ﻿namespace Ovning2.Helpers
 {
+    // Holds constant values for menu options to make the menu code more readable
     public class MenuHelpers
     {
         public const string ControlPrice = "1";
